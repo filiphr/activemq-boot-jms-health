@@ -1,0 +1,9 @@
+spring:
+  activemq:
+#    broker-url: tcp://localhost:51616
+    broker-url: failover:(tcp://localhost:51616,tcp://localhost:61616)
+
+endpoints:
+  default:
+    web:
+      enabled: true
